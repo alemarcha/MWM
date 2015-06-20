@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController
+@interface MapViewController : UIViewController<CLLocationManagerDelegate>
 - (IBAction)CenterButtonClick:(id)sender;
 @property (strong,nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic,retain) CLLocationManager *locationManager;
