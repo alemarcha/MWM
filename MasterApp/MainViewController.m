@@ -39,6 +39,6 @@
 - (IBAction)buttonClickHola:(UIButton *)sender {
     NSLog(@"Click capturado");
     _numClicks++;
-    [_labelInicial setText:[NSString stringWithFormat:@"Se han hecho clicks %i veces",_numClicks]];
+    [_labelInicial setText:[NSString stringWithFormat:@"Se han hecho click %i veces",_numClicks]];
 }
 @end
