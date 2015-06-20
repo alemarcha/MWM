@@ -41,13 +41,25 @@
                                     <rect key="frame" x="0.0" y="72" width="400" height="33"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORI-4b-g5E">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="162" y="285" width="77" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="8G2-lP-cB6" kind="show" id="YSd-5I-Pgq"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNb-kr-wN3">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="174" width="149" height="111"/>
+                                    <rect key="frame" x="126" y="176" width="149" height="111"/>
                                 </variation>
                                 <connections>
                                     <action selector="buttonClickHola:" destination="x0D-AC-UnR" eventType="touchUpInside" id="VYc-Vz-wdy"/>
@@ -58,12 +70,14 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="RBW-Yf-cVt"/>
+                                <exclude reference="ORI-4b-g5E"/>
                                 <exclude reference="TNb-kr-wN3"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="RBW-Yf-cVt"/>
+                                <include reference="ORI-4b-g5E"/>
                                 <include reference="TNb-kr-wN3"/>
                             </mask>
                         </variation>
@@ -78,5 +92,105 @@
             </objects>
             <point key="canvasLocation" x="319.5" y="51"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1GX-BH-rik">
+            <objects>
+                <viewController id="8G2-lP-cB6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="77K-4E-9GP"/>
+                        <viewControllerLayoutGuide type="bottom" id="FX2-oo-xow"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BO9-a7-Pnt">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMU-ht-C0C">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="150" y="285" width="101" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="pou-2c-n11" kind="show" id="ezq-Vs-yiz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="IMU-ht-C0C"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="IMU-ht-C0C"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQH-sp-Ise" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="51"/>
+        </scene>
+        <!--Green-->
+        <scene sceneID="bu1-IB-Hz5">
+            <objects>
+                <viewController id="fTD-Ua-das" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SNv-z3-yFH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rs0-if-Cbm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NAD-wt-Axp">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.24443366803087285" green="1" blue="0.26733124754314708" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Green" image="TabBarIcon2" id="7VZ-2c-ddx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDP-xa-oZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2772" y="371"/>
+        </scene>
+        <!--Orange-->
+        <scene sceneID="Jt5-X3-uA8">
+            <objects>
+                <viewController id="9cw-6g-phE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ria-cy-fWR"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZIs-Y4-Zaf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jBB-BC-7Ma">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.45032624689435741" blue="0.37010543564278897" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Orange" image="TabBarIcon1" id="VAJ-mx-bmb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BLG-VL-QlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2772" y="-291"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="j56-GT-6uU">
+            <objects>
+                <tabBarController id="pou-2c-n11" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="dwr-KQ-gvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9cw-6g-phE" kind="relationship" relationship="viewControllers" id="63R-DR-up8"/>
+                        <segue destination="fTD-Ua-das" kind="relationship" relationship="viewControllers" id="Enf-xZ-GDV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZb-Qs-ml7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1842" y="41"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="TabBarIcon1" width="30" height="30"/>
+        <image name="TabBarIcon2" width="30" height="30"/>
+    </resources>
 </document>
