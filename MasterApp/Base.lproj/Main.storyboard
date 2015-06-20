@@ -154,16 +154,52 @@
         <!--Orange-->
         <scene sceneID="Jt5-X3-uA8">
             <objects>
-                <viewController id="9cw-6g-phE" sceneMemberID="viewController">
+                <viewController id="9cw-6g-phE" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ria-cy-fWR"/>
                         <viewControllerLayoutGuide type="bottom" id="ZIs-Y4-Zaf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jBB-BC-7Ma">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c0n-ay-ydL">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-7" y="108" width="414" height="492"/>
+                                </variation>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bf-N3-ecw">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Centrar" id="iZS-Nm-R5W">
+                                        <connections>
+                                            <action selector="CenterButtonClick:" destination="9cw-6g-phE" id="1j8-hI-v5O"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="44"/>
+                                </variation>
+                            </toolbar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.45032624689435741" blue="0.37010543564278897" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="c0n-ay-ydL"/>
+                                <exclude reference="1bf-N3-ecw"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="c0n-ay-ydL"/>
+                                <include reference="1bf-N3-ecw"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Orange" image="TabBarIcon1" id="VAJ-mx-bmb"/>
+                    <connections>
+                        <outlet property="mapView" destination="c0n-ay-ydL" id="LY0-wD-4MQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BLG-VL-QlD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

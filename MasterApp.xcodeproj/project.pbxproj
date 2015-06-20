@@ -12,6 +12,8 @@
 		02C9EDC01B348224000F52A3 /* MSNCalculadora+MSNCalculadoraRaizCuadrada.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C9EDBF1B348224000F52A3 /* MSNCalculadora+MSNCalculadoraRaizCuadrada.m */; };
 		02C9EDC31B34A258000F52A3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C9EDC21B34A258000F52A3 /* MainViewController.m */; };
 		02DD4EB61B356692002565CE /* MSNImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02DD4EB51B356692002565CE /* MSNImages.xcassets */; };
+		02DD4EB81B356C8F002565CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02DD4EB71B356C8F002565CE /* MapKit.framework */; };
+		02DD4EBB1B356D5B002565CE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DD4EBA1B356D5B002565CE /* MapViewController.m */; };
 		02E46E891B333DB900A02B8E /* MSNFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E46E881B333DB900A02B8E /* MSNFriend.m */; };
 		02FDD3381B30A07100258B36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FDD3371B30A07100258B36 /* main.m */; };
 		02FDD33B1B30A07100258B36 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FDD33A1B30A07100258B36 /* AppDelegate.m */; };
@@ -42,6 +44,9 @@
 		02C9EDC11B34A258000F52A3 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		02C9EDC21B34A258000F52A3 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		02DD4EB51B356692002565CE /* MSNImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = MSNImages.xcassets; path = ../MSNImages.xcassets; sourceTree = "<group>"; };
+		02DD4EB71B356C8F002565CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		02DD4EB91B356D5B002565CE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		02DD4EBA1B356D5B002565CE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		02E46E871B333DB900A02B8E /* MSNFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNFriend.h; sourceTree = "<group>"; };
 		02E46E881B333DB900A02B8E /* MSNFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSNFriend.m; sourceTree = "<group>"; };
 		02FDD3321B30A07100258B36 /* MasterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DD4EB81B356C8F002565CE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,7 @@
 		02FDD3291B30A07100258B36 = {
 			isa = PBXGroup;
 			children = (
+				02DD4EB71B356C8F002565CE /* MapKit.framework */,
 				02FDD3341B30A07100258B36 /* MasterApp */,
 				02FDD34E1B30A07100258B36 /* MasterAppTests */,
 				02FDD3331B30A07100258B36 /* Products */,
@@ -117,6 +124,8 @@
 				02C9EDBF1B348224000F52A3 /* MSNCalculadora+MSNCalculadoraRaizCuadrada.m */,
 				02C9EDC11B34A258000F52A3 /* MainViewController.h */,
 				02C9EDC21B34A258000F52A3 /* MainViewController.m */,
+				02DD4EB91B356D5B002565CE /* MapViewController.h */,
+				02DD4EBA1B356D5B002565CE /* MapViewController.m */,
 			);
 			path = MasterApp;
 			sourceTree = "<group>";
@@ -197,6 +206,11 @@
 					02FDD3311B30A07100258B36 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = DWZ77GEEBY;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					02FDD34A1B30A07100258B36 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -252,6 +266,7 @@
 				026A3DD81B31A64200329794 /* Usuario.m in Sources */,
 				02FDD33E1B30A07100258B36 /* ViewController.m in Sources */,
 				02C9EDBD1B3473F2000F52A3 /* MSNCalculadora.m in Sources */,
+				02DD4EBB1B356D5B002565CE /* MapViewController.m in Sources */,
 				02C9EDC31B34A258000F52A3 /* MainViewController.m in Sources */,
 				02E46E891B333DB900A02B8E /* MSNFriend.m in Sources */,
 				02FDD33B1B30A07100258B36 /* AppDelegate.m in Sources */,
