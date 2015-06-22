@@ -101,6 +101,7 @@
                         <viewControllerLayoutGuide type="bottom" id="FX2-oo-xow"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BO9-a7-Pnt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMU-ht-C0C">
@@ -136,16 +137,77 @@
         <!--Green-->
         <scene sceneID="bu1-IB-Hz5">
             <objects>
-                <viewController id="fTD-Ua-das" sceneMemberID="viewController">
+                <viewController id="fTD-Ua-das" customClass="WeatherViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SNv-z3-yFH"/>
                         <viewControllerLayoutGuide type="bottom" id="Rs0-if-Cbm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NAD-wt-Axp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kxA-9H-frg">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="120" y="172" width="160" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introducir ciudad y país" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtV-pl-kOp">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="97" y="124" width="207" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0v-HI-JQu">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Actualizar información">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="114" y="224" width="173" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="updateClick:" destination="fTD-Ua-das" eventType="touchUpInside" id="vZH-zi-fjl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información no disponible" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp1-Mh-9eP">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="93" y="289" width="214" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.24443366803087285" green="1" blue="0.26733124754314708" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="kxA-9H-frg"/>
+                                <exclude reference="dtV-pl-kOp"/>
+                                <exclude reference="F0v-HI-JQu"/>
+                                <exclude reference="Lp1-Mh-9eP"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="kxA-9H-frg"/>
+                                <include reference="dtV-pl-kOp"/>
+                                <include reference="F0v-HI-JQu"/>
+                                <include reference="Lp1-Mh-9eP"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Green" image="TabBarIcon2" id="7VZ-2c-ddx"/>
+                    <connections>
+                        <outlet property="cityTextField" destination="kxA-9H-frg" id="W8A-v1-awd"/>
+                        <outlet property="labelInfo" destination="Lp1-Mh-9eP" id="CJA-in-OzA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WDP-xa-oZZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -160,6 +222,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZIs-Y4-Zaf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jBB-BC-7Ma">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c0n-ay-ydL">

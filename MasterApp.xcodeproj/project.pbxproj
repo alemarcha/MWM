@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		025E961D1B38414E005FF870 /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025E961C1B38414E005FF870 /* WeatherViewController.m */; };
 		026A3DD81B31A64200329794 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = 026A3DD71B31A64200329794 /* Usuario.m */; };
 		02C9EDBD1B3473F2000F52A3 /* MSNCalculadora.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C9EDBC1B3473F2000F52A3 /* MSNCalculadora.m */; };
 		02C9EDC01B348224000F52A3 /* MSNCalculadora+MSNCalculadoraRaizCuadrada.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C9EDBF1B348224000F52A3 /* MSNCalculadora+MSNCalculadoraRaizCuadrada.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		025E961B1B38414E005FF870 /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		025E961C1B38414E005FF870 /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
 		026A3DD61B31A64200329794 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
 		026A3DD71B31A64200329794 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
 		02C9EDBB1B3473F2000F52A3 /* MSNCalculadora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSNCalculadora.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				02C9EDC21B34A258000F52A3 /* MainViewController.m */,
 				02DD4EB91B356D5B002565CE /* MapViewController.h */,
 				02DD4EBA1B356D5B002565CE /* MapViewController.m */,
+				025E961B1B38414E005FF870 /* WeatherViewController.h */,
+				025E961C1B38414E005FF870 /* WeatherViewController.m */,
 			);
 			path = MasterApp;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				026A3DD81B31A64200329794 /* Usuario.m in Sources */,
 				02FDD33E1B30A07100258B36 /* ViewController.m in Sources */,
 				02C9EDBD1B3473F2000F52A3 /* MSNCalculadora.m in Sources */,
+				025E961D1B38414E005FF870 /* WeatherViewController.m in Sources */,
 				02DD4EBB1B356D5B002565CE /* MapViewController.m in Sources */,
 				02C9EDC31B34A258000F52A3 /* MainViewController.m in Sources */,
 				02E46E891B333DB900A02B8E /* MSNFriend.m in Sources */,
